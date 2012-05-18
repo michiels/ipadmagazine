@@ -1,0 +1,40 @@
+@import "compass/css3";
+
+.title_object {
+  &:hover {
+    background-color: rgba(0,0,0,0.5);
+  }
+  padding: 10px;
+  textarea {
+    outline: none;
+    border: 0;
+    @include appearance(none);
+    font-family: "Helvetica Neue";
+    font-size: 60px;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,0);
+    background: none;
+  }
+  textarea:focus, textarea:hover {
+    border: 2px dashed rgba(0,0,0,0.5);
+  }
+  textarea:focus {
+    background-color: #fff;
+  }
+}
+
+.text_block_object {
+  textarea {
+    outline: none;
+    border: 0;
+    font-family: Georgia;
+    font-size: 15px;
+    line-height: 1.6em;
+    background: none;
+    border: 1px solid rgba(0,0,0,0);
+  }
+  textarea:hover {
+    border: 1px solid #555;
+  }
+}

@@ -1,0 +1,79 @@
+// Place all the styles related to the edition controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "compass/css3";
+@import "compass/utilities";
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  @include background(inline-image("dark_tire.png"));
+}
+
+.edition_canvas {
+  margin-left: 250px;
+  background-color: #FFF;
+  @include box-shadow(#000 0 0 10px);
+  height: 1024px;
+  width: 768px;
+  overflow: auto;
+  .pages_area {
+    width: 3000px;
+    .page {
+      overflow: hidden;
+      position: relative;
+      width: 768px;
+      height: 1024px;
+      float: left;
+    }
+    .text_page {
+      @include box-shadow(rgba(0,0,0,0.4) 0 0 50px inset);
+      @include background(inline-image("clean_textile.png"));
+    }
+  }
+}
+
+.sidebar {
+  background-color: #333;
+  float: left;
+  width: 250px;
+  height: 1024px;
+}
+
+.pages .page {
+  margin: 20px auto;
+  background-color: #FFF;
+  width: 150px;
+  height: 200px;
+  @include clearfix;
+  @include box-shadow(#000 0 2px 5px);
+  .page_title {
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+.pages {
+  .add_page {
+    text-align: center;
+  }
+  
+  .add_page a {
+    color: #ccc
+  }
+}
+
+.toolbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 20px;
+  @include background(linear-gradient(color-stops(#333, #222)), #222);
+  @include text-shadow(#000 0 -1px 0);
+  @include box-shadow(rgba(0,0,0,0.3) 0 -2px 14px);
+  a {
+    color: #eee;
+    text-decoration: none;
+  }
+}

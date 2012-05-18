@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ipadmagazine</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="sidebar">
+  <%= yield :sidebar %>
+</div>
+
+<div class="editor">
+  <%= yield %>
+</div>
+
+<div class="toolbar">
+  <%= link_to "Add title", '#', :id => 'add_title_button' %>
+  <%= link_to "Add text block", '#', :id => 'add_text_block' %>
+</div>
+
+</body>
+</html>

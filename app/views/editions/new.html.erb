@@ -1,0 +1,37 @@
+<div class="edition_canvas">
+  <div class="pages_area">
+    <div class="page" id="first_page">
+      <%= image_tag "epic_cover.jpg", :style => "height: 1024px" %>
+      <div class="title_object" style="display: none; position: absolute; left: 50px; top: 300px;">
+        <textarea name="title_1" style="width: 600px;"></textarea>
+      </div>
+    </div>
+    <div class="page text_page" id="second_page">
+      <div class="text_block_object" style="display: none; position: absolute; left: 50px; top: 50px; width: 300px;">
+        <textarea name="text_block_1" style="width: 300px; height: 924px;"></textarea>
+      </div>
+      
+      <div class="text_block_object" style="display: none; position: absolute; left: 400px; top: 50px; width: 300px;">
+        <textarea name="text_block_2" style="width: 300px; height: 924px;"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar do %>
+  <div class="pages">
+  
+    <div class="page" id="first_page">
+      <div class="page_title">Cover page</div>
+    </div>
+    
+    <div class="page" id="second_page">
+      <div class="page_title">Another page</div>
+    </div>
+    
+    <div class="add_page">
+      <%= link_to "Add page", '#', :id => "add_page_link" %>
+    </div>
+  
+  </div>
+<% end %>
